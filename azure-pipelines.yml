@@ -35,5 +35,5 @@ stages:
         repository: '0rtem/workshopapp'
         command: 'push'
         tags: |
-          $(Build.BuildId)
+          $(tag)
           latest
