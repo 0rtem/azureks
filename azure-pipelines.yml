@@ -25,7 +25,6 @@ stages:
       displayName: Build an image
       inputs:
         command: build
-        containerRegistry: '0rtem/workshopapp'
         dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
