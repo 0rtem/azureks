@@ -25,6 +25,16 @@ stages:
       displayName: Build an image
       inputs:
         command: build
+        containerRegistry: '0rtem/workshopapp'
         dockerfile: '**/Dockerfile'
         tags: |
-          0rtem/workshopapp:latest
+          $(tag)
+          latest
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'docker-registry'
+        repository: '0rtem/workshopapp'
+        command: 'push'
+        tags: |
+          $(Build.BuildId)
+          latest
