@@ -6,7 +6,7 @@ COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 
 #COPY src file to workdir
-COPY C:\Users\Anton.Kovbasa\IdeaProjects\workshop-app\src /home/gradle/src
+COPY ./src /home/gradle/src
 
 RUN gradle build --no-daemon
 
