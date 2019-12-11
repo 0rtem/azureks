@@ -28,10 +28,3 @@ stages:
         dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
-
-    - task: Bash@3
-      inputs:
-        targetType: 'inline'
-        script: |
-        # Write your commands here
-        docker images
